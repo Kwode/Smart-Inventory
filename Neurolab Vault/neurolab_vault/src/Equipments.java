@@ -1,6 +1,8 @@
-public class Equipments {
-    private int equipmentSelection;
-    void getInfo()
+import java.util.Scanner;
+
+public class Equipments extends prototype{
+    Scanner userInput = new Scanner(System.in);
+    public void getInfo()
     {
         System.out.println("You are in the equipment section");
         System.out.println("What would you like to work with?");
@@ -8,6 +10,8 @@ public class Equipments {
         System.out.println("2. Spare Parts");
         System.out.println("3. Medical Equipments");
         System.out.println("4. Testing Equipments");
+
+        int equipmentSelection = userInput.nextInt();
 
         switch (equipmentSelection)
         {
