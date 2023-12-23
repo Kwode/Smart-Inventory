@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Equipments extends prototype{
+public class Equipments extends Main{
     Scanner userInput = new Scanner(System.in);
     public void getInfo()
     {
