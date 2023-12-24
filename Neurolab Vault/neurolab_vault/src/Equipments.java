@@ -12,8 +12,12 @@ public class Equipments extends Main{
         for (int i = 0; i < counter; i++) {
             System.out.print("Enter the name of the equipment: ");
             String inventoryInput = userInput.next();
-            System.out.print("Enter the expiry date in figures: ");
+            System.out.print("Enter the entry date in the format dmmyy - 3112006: ");
             int inventoryInputDate1 = userInput.nextInt();
+            System.out.print("Enter the expiry date in the format dmmyy - 3112006: ");
+            int inventoryInputDate2 = userInput.nextInt();
+            System.out.print("Enter the NAFDAC Reg. No.: ");
+            int NAFDACInput = userInput.nextInt();
             inventoryInfo.put(inventoryInput, inventoryInputDate1);
         }
 
@@ -37,6 +41,7 @@ public class Equipments extends Main{
 
         switch (equipmentSelection)
         {
+            //Working on Consumables and accessories
             case 1:
                 System.out.println("Would you like to: ");
                 System.out.println("1. Add new equipment");
@@ -85,24 +90,32 @@ public class Equipments extends Main{
                 }
                 break;
             case 2:
+
+                //working on Spare Parts
                 System.out.println("Would you like to...");
                 System.out.println("1. Add new equipment");
                 System.out.println("2. Update Inventory");
                 System.out.println("3. Look into inventory");
                 break;
             case 3:
+
+                //working on Medical Equipments
                 System.out.println("Would you like to...");
                 System.out.println("1. Add new equipment");
                 System.out.println("2. Update Inventory");
                 System.out.println("3. Look into inventory");
                 break;
             case 4:
+
+                //working on Testing Equipments
                 System.out.println("Would you like to...");
                 System.out.println("1.Add new equipment");
                 System.out.println("2. Update Inventory");
                 System.out.println("3. Look into inventory");
                 break;
             case 5:
+
+                //Redirecting back to  main page
                 welcomeUser();
                 break;
             default:
