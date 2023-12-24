@@ -1,9 +1,9 @@
+import java.util.HashMap;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Equipments extends Main{
     Scanner userInput = new Scanner(System.in);
-    ArrayList<String> inventoryInfo = new ArrayList<>();
+    HashMap<String, Integer> inventoryInfo = new HashMap<>();
 
     public void addToInventory()
     {
@@ -12,7 +12,9 @@ public class Equipments extends Main{
         for (int i = 0; i < counter; i++) {
             System.out.print("Enter the name of the equipment: ");
             String inventoryInput = userInput.next();
-            inventoryInfo.add(inventoryInput);
+            System.out.print("Enter the expiry date in figures: ");
+            int inventoryInputDate1 = userInput.nextInt();
+            inventoryInfo.put(inventoryInput, inventoryInputDate1);
         }
 
     }
@@ -48,8 +50,8 @@ public class Equipments extends Main{
                 {
                     case 1:
                         addToInventory();
-                        System.out.println("Would you like to: ");
                         System.out.print("\n");
+                        System.out.println("Would you like to: ");
                         System.out.println("1. Look into inventory");
                         System.out.println("2. Back");
 
