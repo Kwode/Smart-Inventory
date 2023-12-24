@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class prototype{
+public class Main{
     //initializing the equipments class
     public static Equipments inventoryEquipment = new Equipments();
 
