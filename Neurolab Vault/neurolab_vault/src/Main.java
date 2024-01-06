@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main{
@@ -10,13 +9,15 @@ public class Main{
     //initializing the medicine class
     public static Medicine inventoryMedicine = new Medicine();
 
-    public static void welcomeUser()
-    {
-        System.out.println("NEUROLAB VAULT");
+    static Main main = new Main();
+
+    public void welcomeUser(){
+        System.out.println("WELCOME TO NEUROLAB VAULT");
         System.out.println("What section do you want to work with today?");
         System.out.println("1. Equipments");
         System.out.println("2. Medicine");
-        System.out.print("\n");
+        System.out.println("3. Exit");
+        System.out.print("Enter option: ");
 
         int sectionNumber = input.nextInt();
 
@@ -24,11 +25,14 @@ public class Main{
         switch (sectionNumber)
         {
             case 1:
-                inventoryEquipment.displayOptions();
+                inventoryEquipment.welcomeUser();
                 break;
             case 2:
-                System.out.println("You are in the medicine section");
-                System.out.println("What would you like to work with?");
+                inventoryMedicine.welcomeUser();
+                break;
+            case 3:
+                System.out.println("Thank you for using NeuroLabVault!");
+                System.exit(0);
                 break;
             default:
                 System.out.println("Invalid Input");
@@ -37,7 +41,7 @@ public class Main{
 
     }
 
-    public static void main(String[] args) {
-        welcomeUser();
+    public static void main(String[] args){
+        main.welcomeUser();
     }
 }
